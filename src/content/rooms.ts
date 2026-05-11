@@ -197,9 +197,9 @@ export const rooms: Room[] = [
     ],
   },
   {
-    id: "product-enablement",
+    id: "product-and-skill-enablement",
     number: 2,
-    name: "product enablement",
+    name: "product and skill enablement",
     hero: "depth that holds up under pressure.",
     sub: "eight things that should be in this room when it's fully built. answer for what's actually there today, not what's on the roadmap.",
     items: [

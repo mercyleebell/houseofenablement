@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { rooms } from "@/content/rooms";
+import { RoomSketch } from "@/components/RoomSketches";
+import type { RoomNumber } from "@/lib/types";
 
 export default function Home() {
   return (
@@ -50,30 +52,50 @@ export default function Home() {
       </section>
 
       <section className="px-6 pb-16 sm:px-10 sm:pb-24">
-        <div className="house-grid mx-auto max-w-6xl">
-          {rooms.map((room) => (
-            <Link
-              key={room.id}
-              href={`/room/${room.number}`}
-              className="room-card group"
-            >
-              <div className="flex items-center justify-between">
-                <div className="label-mono">room {room.number}</div>
-                <div className="label-mono opacity-0 group-hover:opacity-100 transition-opacity">
-                  enter &rarr;
+        <div className="mx-auto max-w-6xl">
+          <svg
+            viewBox="0 0 800 130"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+            className="text-carbon w-full h-auto block"
+          >
+            <path d="M 2 126 Q 200 70, 402 8 Q 600 70, 798 126" />
+          </svg>
+          <div className="house-grid">
+            {rooms.map((room) => (
+              <Link
+                key={room.id}
+                href={`/room/${room.number}`}
+                className="room-card group"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="label-mono">room {room.number}</div>
+                  <RoomSketch
+                    n={room.number as RoomNumber}
+                    className="text-carbon w-[72px] sm:w-[88px] shrink-0 -mt-1"
+                  />
                 </div>
-              </div>
-              <div className="mt-6">
-                <div className="label-mono text-carbon">{room.name}</div>
-                <div className="display mt-3 text-2xl sm:text-3xl">
-                  {room.hero}
+                <div className="mt-4">
+                  <div className="label-mono text-carbon">{room.name}</div>
+                  <div className="display mt-3 text-2xl sm:text-3xl">
+                    {room.hero}
+                  </div>
                 </div>
-              </div>
-              <div className="mt-auto pt-8 label-mono">
-                8 items · about 4 minutes
-              </div>
-            </Link>
-          ))}
+                <div className="mt-auto pt-8 flex items-center justify-between gap-4">
+                  <div className="label-mono">
+                    8 items · about 4 minutes
+                  </div>
+                  <div className="label-mono opacity-0 group-hover:opacity-100 transition-opacity">
+                    enter &rarr;
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
