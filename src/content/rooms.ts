@@ -5,7 +5,7 @@ export const rooms: Room[] = [
     id: "onboarding",
     number: 1,
     name: "onboarding",
-    hero: "where the brain gets wired.",
+    hero: "onboarding",
     sub: "eight things that should be in this room when it's fully built. answer for what's actually there today, not what's on the roadmap.",
     items: [
       {
@@ -200,7 +200,7 @@ export const rooms: Room[] = [
     id: "product-and-skill-enablement",
     number: 2,
     name: "product and skill enablement",
-    hero: "depth that holds up under pressure.",
+    hero: "product and skill enablement",
     sub: "eight things that should be in this room when it's fully built. answer for what's actually there today, not what's on the roadmap.",
     items: [
       {
@@ -382,10 +382,10 @@ export const rooms: Room[] = [
     ],
   },
   {
-    id: "play-based-field-activation",
+    id: "field-activation",
     number: 3,
-    name: "play-based field activation",
-    hero: "the party room.",
+    name: "field activation",
+    hero: "field activation",
     sub: "eight things that should be in this room when it's fully built. answer for what's actually there today, not what's on the roadmap.",
     items: [
       {
@@ -579,7 +579,7 @@ export const rooms: Room[] = [
     id: "leadership-development",
     number: 4,
     name: "leadership development",
-    hero: "where you deliver on the carrot.",
+    hero: "leadership development",
     sub: "eight things that should be in this room when it's fully built. answer for what's actually there today, not what's on the roadmap.",
     items: [
       {

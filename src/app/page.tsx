@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { rooms } from "@/content/rooms";
-import { RoomSketch } from "@/components/RoomSketches";
+import { RoomScene } from "@/components/RoomScenes";
 import type { RoomNumber } from "@/lib/types";
 
 export default function Home() {
@@ -72,20 +72,19 @@ export default function Home() {
                 href={`/room/${room.number}`}
                 className="room-card group"
               >
-                <div className="flex items-start justify-between gap-4">
+                <RoomScene
+                  n={room.number as RoomNumber}
+                  className="room-scene text-carbon"
+                />
+                <div className="relative z-10 flex items-start justify-between gap-4">
                   <div className="label-mono">room {room.number}</div>
-                  <RoomSketch
-                    n={room.number as RoomNumber}
-                    className="text-carbon w-[72px] sm:w-[88px] shrink-0 -mt-1"
-                  />
                 </div>
-                <div className="mt-4">
-                  <div className="label-mono text-carbon">{room.name}</div>
-                  <div className="display mt-3 text-2xl sm:text-3xl">
+                <div className="relative z-10 mt-6">
+                  <div className="display text-3xl sm:text-4xl leading-[1.05]">
                     {room.hero}
                   </div>
                 </div>
-                <div className="mt-auto pt-8 flex items-center justify-between gap-4">
+                <div className="relative z-10 mt-auto pt-8 flex items-center justify-between gap-4">
                   <div className="label-mono">
                     8 items · about 4 minutes
                   </div>
@@ -125,14 +124,28 @@ export default function Home() {
           display: flex;
           flex-direction: column;
           min-height: 18rem;
+          position: relative;
+          overflow: hidden;
           transition: background 200ms ease;
+        }
+        .room-scene {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0.18;
+          pointer-events: none;
+          transition: opacity 200ms ease;
+        }
+        .room-card:hover .room-scene {
+          opacity: 0.55;
         }
         .room-card:not(:last-child) {
           border-bottom: 1.5px solid var(--carbon);
         }
         @media (min-width: 768px) {
           .room-card {
-            min-height: 22rem;
+            min-height: 26rem;
             padding: 2.5rem 2.25rem;
           }
           .room-card:not(:last-child) {
