@@ -109,26 +109,27 @@ export function BallroomScene({ className }: SceneProps) {
       <path d="M 286 74 L 276 102 L 304 100 Z" />
       <path d="M 322 66 L 312 94 L 340 92 Z" />
       <path d="M 360 50 L 350 80 L 378 78 Z" />
-      {/* center: tiered cake on a small table */}
+      {/* center: punch bowl on a table with a ladle and two cups */}
       {/* table */}
-      <path d="M 146 198 Q 200 200, 254 198 L 252 222 Q 200 226, 148 222 Z" />
-      {/* bottom tier of cake (widest) */}
-      <path d="M 158 166 Q 200 164, 242 166 L 242 200 Q 200 204, 158 200 Z" />
-      <path d="M 158 178 Q 200 176, 242 178" opacity="0.4" />
-      {/* middle tier */}
-      <path d="M 172 140 Q 200 138, 228 140 L 228 166 Q 200 168, 172 166 Z" />
-      <path d="M 172 150 Q 200 148, 228 150" opacity="0.4" />
-      {/* top tier */}
-      <path d="M 184 122 Q 200 120, 216 122 L 216 140 Q 200 142, 184 140 Z" />
-      {/* candles */}
-      <path d="M 188 122 L 188 108" />
-      <path d="M 187 108 Q 186 104, 188 102 Q 190 104, 189 108" />
-      <path d="M 196 122 L 196 106" />
-      <path d="M 195 106 Q 194 102, 196 100 Q 198 102, 197 106" />
-      <path d="M 204 122 L 204 106" />
-      <path d="M 203 106 Q 202 102, 204 100 Q 206 102, 205 106" />
-      <path d="M 212 122 L 212 108" />
-      <path d="M 211 108 Q 210 104, 212 102 Q 214 104, 213 108" />
+      <path d="M 130 198 Q 200 200, 270 198 L 268 222 Q 200 226, 132 222 Z" />
+      {/* punch bowl rim (top ellipse, slight perspective) */}
+      <path d="M 144 148 Q 200 136, 256 148 Q 200 160, 144 148 Z" />
+      {/* bowl body — curved sides from rim down to base */}
+      <path d="M 144 148 Q 128 176, 156 196 Q 200 204, 244 196 Q 272 176, 256 148" />
+      {/* punch liquid surface inside the bowl */}
+      <path d="M 152 154 Q 200 162, 248 154" opacity="0.45" />
+      {/* pedestal foot under bowl */}
+      <path d="M 188 196 L 188 200 L 212 200 L 212 196" />
+      {/* ladle handle curving up out of the bowl */}
+      <path d="M 240 150 Q 244 132, 250 114 Q 254 100, 250 92" />
+      {/* ladle scoop at the top of the handle */}
+      <path d="M 242 86 Q 254 82, 258 90 Q 254 100, 246 98 Q 238 92, 242 86 Z" />
+      {/* punch cup left on the table */}
+      <path d="M 90 180 Q 88 196, 94 200 L 114 200 Q 120 196, 118 180 Q 104 178, 90 180 Z" />
+      <path d="M 118 184 Q 126 184, 126 190 Q 126 196, 118 196" />
+      {/* punch cup right on the table */}
+      <path d="M 282 180 Q 280 196, 286 200 L 306 200 Q 312 196, 310 180 Q 296 178, 282 180 Z" />
+      <path d="M 310 184 Q 318 184, 318 190 Q 318 196, 310 196" />
       {/* left balloon cluster */}
       <path d="M 44 124 Q 24 124, 24 144 Q 24 164, 44 164 Q 64 164, 64 144 Q 64 124, 44 124 Z" />
       <path d="M 42 164 L 46 168 L 42 170" />
