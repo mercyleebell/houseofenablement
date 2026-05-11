@@ -8,7 +8,28 @@ export default function Home() {
         <div className="label-mono">mercy bell · field activation systems</div>
       </header>
 
-      <section className="px-6 pt-8 pb-12 sm:px-10 sm:pt-16 sm:pb-20 max-w-6xl">
+      <section className="px-6 pt-4 pb-12 sm:px-10 sm:pt-8 sm:pb-20 max-w-6xl">
+        <svg
+          viewBox="0 0 200 170"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+          className="text-carbon w-[140px] sm:w-[180px] mb-6 sm:mb-10"
+        >
+          <path d="M 23 152 Q 21 118, 22 82 Q 60 52, 99 22 Q 138 52, 178 82 Q 180 118, 177 152 Q 100 156, 23 152 Z" />
+          <path d="M 25 82 Q 100 86, 176 82" />
+          <path d="M 84 152 L 85 116 Q 100 113, 116 117 L 115 152" />
+          <circle cx="110" cy="135" r="1.8" fill="currentColor" stroke="none" />
+          <path d="M 40 100 Q 38 116, 41 124 Q 53 126, 65 124 Q 66 114, 65 100 Q 53 98, 40 100 Z" />
+          <path d="M 52 100 L 53 124" />
+          <path d="M 40 112 L 65 113" />
+          <path d="M 135 100 Q 133 116, 136 124 Q 148 126, 160 124 Q 161 114, 160 100 Q 148 98, 135 100 Z" />
+          <path d="M 147 100 L 148 124" />
+          <path d="M 135 112 L 160 113" />
+        </svg>
         <h1 className="display text-[clamp(2.5rem,7vw,5.5rem)] max-w-4xl">
           what&apos;s missing in your house of enablement?
         </h1>

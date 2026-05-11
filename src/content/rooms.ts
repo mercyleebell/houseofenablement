@@ -197,9 +197,9 @@ export const rooms: Room[] = [
     ],
   },
   {
-    id: "solution-role-depth",
+    id: "product-enablement",
     number: 2,
-    name: "solution & role depth",
+    name: "product enablement",
     hero: "depth that holds up under pressure.",
     sub: "eight things that should be in this room when it's fully built. answer for what's actually there today, not what's on the roadmap.",
     items: [
@@ -382,9 +382,9 @@ export const rooms: Room[] = [
     ],
   },
   {
-    id: "field-activation",
+    id: "play-based-field-activation",
     number: 3,
-    name: "field activation",
+    name: "play-based field activation",
     hero: "the party room.",
     sub: "eight things that should be in this room when it's fully built. answer for what's actually there today, not what's on the roadmap.",
     items: [
@@ -576,9 +576,9 @@ export const rooms: Room[] = [
     ],
   },
   {
-    id: "career-development",
+    id: "leadership-development",
     number: 4,
-    name: "career development",
+    name: "leadership development",
     hero: "where you deliver on the carrot.",
     sub: "eight things that should be in this room when it's fully built. answer for what's actually there today, not what's on the roadmap.",
     items: [
