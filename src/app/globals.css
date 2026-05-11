@@ -1,26 +1,57 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --chartreuse: #d4eb86;
+  --carbon: #0a0a0a;
+  --paper: #fafaf7;
+  --stone: #5a5a55;
+  --rule: rgba(10, 10, 10, 0.18);
+  --rule-soft: rgba(10, 10, 10, 0.1);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-chartreuse: var(--chartreuse);
+  --color-carbon: var(--carbon);
+  --color-paper: var(--paper);
+  --color-stone: var(--stone);
+  --color-rule: var(--rule);
+  --color-rule-soft: var(--rule-soft);
+
+  --font-display: var(--font-archivo-black);
+  --font-sans: var(--font-archivo);
+  --font-mono: var(--font-plex-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  background: var(--paper);
+  color: var(--carbon);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--carbon);
+  color: var(--chartreuse);
+}
+
+.label-mono {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  color: var(--stone);
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  text-transform: lowercase;
 }
