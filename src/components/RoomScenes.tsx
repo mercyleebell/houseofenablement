@@ -89,57 +89,64 @@ export function OfficeScene({ className }: SceneProps) {
   );
 }
 
-// room 3: field activation — ballroom / party interior
+// room 3: field activation — party room / celebration (bunting + balloons + cake)
 export function BallroomScene({ className }: SceneProps) {
   return (
-    <svg {...sceneProps} className={className}>
+    <svg {...sceneProps} className={className} strokeWidth={2}>
       {/* floor */}
-      <path d="M 0 222 Q 200 224, 400 222" />
-      {/* chandelier hanging from ceiling */}
-      <path d="M 200 6 L 200 28" />
-      <circle cx="200" cy="42" r="15" />
-      <path d="M 185 42 Q 200 50, 215 42" opacity="0.5" />
-      <path d="M 200 57 L 200 64" />
-      <path d="M 188 60 L 184 68" />
-      <path d="M 212 60 L 216 68" />
-      <path d="M 200 64 L 200 72" />
-      {/* bunting strings */}
-      <path d="M 6 26 Q 100 70, 200 44 Q 300 18, 394 56" />
-      {/* triangle flags on bunting */}
-      <path d="M 32 52 L 26 70 L 40 70 Z" />
-      <path d="M 64 64 L 58 82 L 72 82 Z" />
-      <path d="M 100 66 L 94 84 L 108 84 Z" />
-      <path d="M 138 60 L 132 78 L 146 78 Z" />
-      <path d="M 174 50 L 168 68 L 182 68 Z" />
-      <path d="M 232 42 L 226 60 L 240 60 Z" />
-      <path d="M 268 36 L 262 54 L 276 54 Z" />
-      <path d="M 304 38 L 298 56 L 312 56 Z" />
-      <path d="M 340 44 L 334 62 L 348 62 Z" />
-      <path d="M 374 56 L 368 74 L 382 74 Z" />
-      {/* balloon cluster left */}
-      <path d="M 32 130 Q 18 130, 18 144 Q 18 158, 32 158 Q 46 158, 46 144 Q 46 130, 32 130 Z" />
-      <path d="M 32 158 Q 30 178, 34 196" />
-      <path d="M 60 146 Q 48 146, 48 158 Q 48 170, 60 170 Q 72 170, 72 158 Q 72 146, 60 146 Z" />
-      <path d="M 60 170 Q 62 184, 58 200" />
-      <path d="M 48 174 Q 36 174, 36 186 Q 36 198, 48 198 Q 60 198, 60 186 Q 60 174, 48 174 Z" />
-      <path d="M 48 198 Q 50 210, 46 218" />
-      {/* balloon cluster right */}
-      <path d="M 364 134 Q 350 134, 350 148 Q 350 162, 364 162 Q 378 162, 378 148 Q 378 134, 364 134 Z" />
-      <path d="M 364 162 Q 366 182, 362 198" />
-      <path d="M 340 154 Q 328 154, 328 166 Q 328 178, 340 178 Q 352 178, 352 166 Q 352 154, 340 154 Z" />
-      <path d="M 340 178 Q 342 192, 338 208" />
-      {/* streamers */}
-      <path d="M 110 90 Q 122 110, 110 130 Q 98 150, 110 170" />
-      <path d="M 290 90 Q 278 110, 290 130 Q 302 150, 290 170" />
-      {/* confetti specks */}
-      <path d="M 140 130 L 144 134" />
-      <path d="M 170 156 L 168 160" />
-      <path d="M 218 134 L 222 132" />
-      <path d="M 250 158 L 252 162" />
-      <path d="M 200 180 L 204 178" />
-      <path d="M 158 200 L 160 204" />
-      <path d="M 242 200 L 246 196" />
-      <path d="M 180 124 L 184 126" />
+      <path d="M 0 232 Q 200 234, 400 232" opacity="0.4" />
+      {/* bunting — left string */}
+      <path d="M 6 22 Q 80 76, 156 60" />
+      {/* chunky flags on left bunting */}
+      <path d="M 26 50 L 16 80 L 44 78 Z" />
+      <path d="M 60 66 L 50 94 L 78 92 Z" />
+      <path d="M 96 74 L 86 102 L 114 100 Z" />
+      <path d="M 134 70 L 124 98 L 152 96 Z" />
+      {/* bunting — right string */}
+      <path d="M 244 60 Q 320 76, 394 22" />
+      {/* chunky flags on right bunting */}
+      <path d="M 248 70 L 238 98 L 266 96 Z" />
+      <path d="M 286 74 L 276 102 L 304 100 Z" />
+      <path d="M 322 66 L 312 94 L 340 92 Z" />
+      <path d="M 360 50 L 350 80 L 378 78 Z" />
+      {/* center: tiered cake on a small table */}
+      {/* table */}
+      <path d="M 146 198 Q 200 200, 254 198 L 252 222 Q 200 226, 148 222 Z" />
+      {/* bottom tier of cake (widest) */}
+      <path d="M 158 166 Q 200 164, 242 166 L 242 200 Q 200 204, 158 200 Z" />
+      <path d="M 158 178 Q 200 176, 242 178" opacity="0.4" />
+      {/* middle tier */}
+      <path d="M 172 140 Q 200 138, 228 140 L 228 166 Q 200 168, 172 166 Z" />
+      <path d="M 172 150 Q 200 148, 228 150" opacity="0.4" />
+      {/* top tier */}
+      <path d="M 184 122 Q 200 120, 216 122 L 216 140 Q 200 142, 184 140 Z" />
+      {/* candles */}
+      <path d="M 188 122 L 188 108" />
+      <path d="M 187 108 Q 186 104, 188 102 Q 190 104, 189 108" />
+      <path d="M 196 122 L 196 106" />
+      <path d="M 195 106 Q 194 102, 196 100 Q 198 102, 197 106" />
+      <path d="M 204 122 L 204 106" />
+      <path d="M 203 106 Q 202 102, 204 100 Q 206 102, 205 106" />
+      <path d="M 212 122 L 212 108" />
+      <path d="M 211 108 Q 210 104, 212 102 Q 214 104, 213 108" />
+      {/* left balloon cluster */}
+      <path d="M 44 124 Q 24 124, 24 144 Q 24 164, 44 164 Q 64 164, 64 144 Q 64 124, 44 124 Z" />
+      <path d="M 42 164 L 46 168 L 42 170" />
+      <path d="M 42 170 Q 38 188, 44 206" />
+      <path d="M 80 146 Q 60 146, 60 166 Q 60 186, 80 186 Q 100 186, 100 166 Q 100 146, 80 146 Z" />
+      <path d="M 78 186 L 82 190 L 78 192" />
+      <path d="M 78 192 Q 80 208, 74 220" />
+      <path d="M 30 184 Q 14 184, 14 202 Q 14 220, 30 220 Q 46 220, 46 202 Q 46 184, 30 184 Z" />
+      <path d="M 28 220 L 32 222" />
+      {/* right balloon cluster */}
+      <path d="M 356 126 Q 336 126, 336 146 Q 336 166, 356 166 Q 376 166, 376 146 Q 376 126, 356 126 Z" />
+      <path d="M 354 166 L 358 170 L 354 172" />
+      <path d="M 354 172 Q 358 190, 352 208" />
+      <path d="M 320 148 Q 300 148, 300 168 Q 300 188, 320 188 Q 340 188, 340 168 Q 340 148, 320 148 Z" />
+      <path d="M 318 188 L 322 192 L 318 194" />
+      <path d="M 318 194 Q 320 208, 314 222" />
+      <path d="M 370 184 Q 354 184, 354 202 Q 354 220, 370 220 Q 386 220, 386 202 Q 386 184, 370 184 Z" />
+      <path d="M 368 220 L 372 222" />
     </svg>
   );
 }
